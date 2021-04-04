@@ -10,7 +10,11 @@ import { AuthService } from '../auth.service';
 })
 export class DashboardComponent implements OnInit {
   dashboard = [];
-  constructor(private router: Router, private _authService: AuthService, private _eventService: EventService) {}
+  constructor(
+    private router: Router,
+    private _authService: AuthService,
+    private _eventService: EventService
+  ) {}
 
   ngOnInit() {
     this._eventService.getDashboard().subscribe((response: any) => {
@@ -18,14 +22,18 @@ export class DashboardComponent implements OnInit {
         console.log(response);
         alert(response.message);
         this.router.navigate(['']);
-      } 
-      else {
-        console.log(response.message)
+      } else {
+        console.log(response.message);
       }
     });
   }
 
-  logout() {
-    this.router.navigate(['']);
+  loggedIn() {
+    var outA = this._authService.loggedIn();
+    return outA;
+  }
+
+  logoutUser() {
+    this._authService.logoutUser();
   }
 }

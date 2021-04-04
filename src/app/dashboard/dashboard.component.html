@@ -7,7 +7,7 @@
                         WELCOME
                     </div>
                     <div class="col-xl-6 my-3 offset-5">
-                        <button class="btn btn-danger text-white font-weight-bold" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</button>
+                        <button class="btn btn-danger text-white font-weight-bold" *ngIf="loggedIn()" (click)="logoutUser()">Logout</button>
                     </div>
                 </div>
             </div>

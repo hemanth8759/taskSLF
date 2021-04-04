@@ -11,6 +11,6 @@ export class EventService {
   constructor(private http: HttpClient) { }
 
   getDashboard() {
-    return this.http.get<any>(this._dashboard);
+    return this.http.get(this._dashboard);
   }
 }
