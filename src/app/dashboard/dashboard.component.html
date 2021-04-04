@@ -1,0 +1,16 @@
+<div class="bg-dark vh-100">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 my-5 offset-3">
+                <div class="card my-5 mx-5 p-5">
+                    <div class="card-title h2 ml-3 text-success font-weight-bold text-center">
+                        WELCOME
+                    </div>
+                    <div class="col-xl-6 my-3 offset-5">
+                        <button class="btn btn-danger text-white font-weight-bold" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

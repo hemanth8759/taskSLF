@@ -1,0 +1,34 @@
+<div class="container-fluid vh-100 bg-dark">
+    <div class="row">
+        <div class="col-xl-8 offset-2">
+            <div class="card my-5 mx-5 p-5">
+                <div class="card-title h2 text-success font-weight-bold text-center">
+                    LOGIN
+                </div>
+                <hr>
+                <div class="card-body">
+                    <form [formGroup]="loginGroup">
+                        <div class="row">
+                            <div class="col-xl-6 offset-3">
+                                <label for="email">Email</label>
+                                <input type="email" formControlName="email" name="email" class="form-control" placeholder="Enter your email here" required><br>
+                            </div>
+                            <div class="col-xl-6 offset-3">
+                                <label for="password">Password</label>
+                                <input type="password" formControlName="password" name="password" class="form-control" placeholder="Type your password here" required><br>
+                            </div>
+                            <div class="col-xl-6 offset-3">
+                                <button class="btn btn-success btn-user btn-block w-25 font-weight-bold text-white" [disabled]="!loginGroup.valid" (click)="login()">Login</button>
+                            </div>
+                            
+                            <div class="col-xl-6 my-3 offset-3">
+                                <hr>
+                                <button class="btn btn-primary text-white font-weight-bold" (click)="navigateRegister()">Create an Account</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
