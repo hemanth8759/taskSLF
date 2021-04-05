@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 var mongoose = require('mongoose');
-const url = process.env.mongoHost;
 const JWT_secret_key = process.env.JWT_secret_key;
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -12,7 +11,7 @@ const UserModel = require('./models/userModel.js');
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(url, {
+mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true
 });
 
