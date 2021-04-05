@@ -2,7 +2,7 @@
   "name": "task-slf",
   "version": "0.0.0",
   "scripts": {
-    "start": "node server.js",
+    "start": "npm start",
     "ng": "ng",
     "build": "ng build",
     "test": "ng test",
