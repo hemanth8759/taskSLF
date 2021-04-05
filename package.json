@@ -5,9 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd taskSLF && ng build --prod",
-    "installClient": "cd taskSLF && npm install",
-    "heroku-postbuild": "npm run installClient && npm run build",
+    "heroku-postbuild": "cd taskSLF && npm install",
     "start": "node server.js"
   },
   "author": "hemanth.k",
