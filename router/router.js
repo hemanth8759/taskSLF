@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 var mongoose = require('mongoose');
-const JWT_secret_key = process.env.JWT_secret_key;
+const JWT_secret_key = process.env.JWT_SECRET_KEY;
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const app = module.exports = express();
