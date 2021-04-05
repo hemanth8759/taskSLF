@@ -4,16 +4,19 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "build": "cd taskSLF && ng build --prod",
     "installClient": "cd taskSLF && npm install",
     "heroku-postbuild": "npm run installClient && npm run build",
-    "start": "node server.js",
+    "client": "cd taskSLF && npm start",
+    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon server.js\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "hemanth.k",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "concurrently": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
