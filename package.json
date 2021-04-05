@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "cd taskSLF && ng build --prod",
+    "build": "cd taskSLF && ng build",
     "installClient": "cd taskSLF && npm install",
     "heroku-postbuild": "npm run installClient && npm run build",
     "client": "cd taskSLF && npm start",
