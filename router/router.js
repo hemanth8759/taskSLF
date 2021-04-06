@@ -24,7 +24,8 @@ db.on("error", (err) => {
   console.log(err);
   res.json({
     "status": "error",
-    "message": "connection to database failed"
+    "message": "connection to database failed \n" +
+    "please press Enter or click OK"
   });
 });
 
@@ -33,14 +34,16 @@ var verifyToken = (req, res, next) => {
     if(!req.headers.authorization){
         return res.json({
             status: "error",
-            message: "unauthorized request"
+            message: "unauthorized request \n" +
+            "please press Enter or click OK"
         })
     }
     let token = req.headers.authorization.split(' ')[1];
     if (token === 'null'){
         return res.json({
             status: "error",
-            message: "unauthorized request"
+            message: "unauthorized request \n" +
+            "please press Enter or click OK"
         })
     }
     try {
@@ -48,7 +51,8 @@ var verifyToken = (req, res, next) => {
         if(!payload){
             return res.json({
                 status: "error",
-                message: "unauthorized request"
+                message: "unauthorized request \n"+
+                "please press Enter or click OK"
             })
         }
         req.email = payload.email;
@@ -56,7 +60,8 @@ var verifyToken = (req, res, next) => {
     } catch (err) {
         res.json({
             status: "error",
-            message: "unauthorized token creation"
+            message: "unauthorized token creation \n"+
+            "please press Enter or click OK"
         })
     }
 }
@@ -71,7 +76,8 @@ app.post('/loginNd', async (req, res) => {
   if (user == null) {
     return res.json({
       "status": "error",
-      "message": "user doesn't exist"
+      "message": "user doesn't exist \n"+
+      "please press Enter or click OK"
     })
   }
   try {
@@ -87,14 +93,16 @@ app.post('/loginNd', async (req, res) => {
     } else {
       res.json({
         "status": "error",
-        "message": "incorrect password"
+        "message": "incorrect password \n"+
+        "please press Enter or click OK"
       })
     }
   } catch (err) {
     console.log(err);
     res.json({
       "status": "error",
-      "message": err.message
+      "message": err.message + " \n" +
+      "please press Enter or click OK"
     })
   }
 })
@@ -115,7 +123,8 @@ app.post('/registerNd', async (req, res) => {
     console.log(err);
     res.json({
         "status": "error",
-        "message": String(err.message).split(": ")[2]
+        "message": String(err.message).split(": ")[2] + " \n" +
+        "please press Enter or click OK"
     });
 }
 })
