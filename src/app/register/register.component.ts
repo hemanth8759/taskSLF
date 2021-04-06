@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
           console.log(response);
           alert(response.message);
         } else {
-          alert('Registration success');
+          alert('Registration success \n' + 'please press Enter or click OK');
           this.router.navigate(['']);
         }
       })
