@@ -1,6 +1,6 @@
 <div class="container-fluid min-vh-100 bg-dark">
     <div class="row">
-        <div class="col-xl-8 col-md-8 col-sm-8 offset-2">
+        <div class="col-xl-8 col-md-8 col-sm-8 col-10 offset-xl-2 offset-1">
             <div class="card my-5 mx-5 p-5">
                 <div class="card-title h2 text-primary font-weight-bold text-center">
                     REGISTRATION
@@ -8,23 +8,23 @@
                 <div class="card-body">
                     <form [formGroup]="userGroup" (ngSubmit)="sendData()">
                         <div class="row">
-                            <div class="col-xl-6 col-md-8 col-sm-8 offset-md-2 offset-sm-2 offset-3">
+                            <div class="col-xl-8 col-md-8 col-sm-8 col-10 offset-1 offset-md-2 offset-sm-2 offset-xl-3">
                                 <label for="firstName">First Name</label>
                                 <input type="text" formControlName="firstName" name="firstName" class="form-control" placeholder="Enter your first name here" required><br>
                             </div>
-                            <div class="col-xl-6 col-md-8 col-sm-8 offset-md-2 offset-sm-2 offset-3">
+                            <div class="col-xl-8 col-md-8 col-sm-8 col-10 offset-1 offset-md-2 offset-sm-2 offset-xl-3">
                                 <label for="lastName">Last Name</label>
                                 <input type="text" formControlName="lastName" name="lastName" class="form-control" placeholder="Enter your last name here" required><br>
                             </div>
-                            <div class="col-xl-6 col-md-8 col-sm-8 offset-md-2 offset-sm-2 offset-3">
+                            <div class="col-xl-8 col-md-8 col-sm-8 col-10 offset-1 offset-md-2 offset-sm-2 offset-xl-3">
                                 <label for="email">Email</label>
                                 <input type="email" formControlName="email" name="email" class="form-control" placeholder="Enter your email here" required><br>
                             </div>
-                            <div class="col-xl-6 col-md-8 col-sm-8 offset-md-2 offset-sm-2 offset-3">
+                            <div class="col-xl-8 col-md-8 col-sm-8 col-10 offset-1 offset-md-2 offset-sm-2 offset-xl-3">
                                 <label for="password">Password</label>
                                 <input type="password" formControlName="password" name="password" class="form-control" placeholder="Type your password here" required><br>
                             </div>
-                            <div class="col-xl-6 col-md-12 col-sm-12 offset-md-2 offset-sm-2 offset-3">
+                            <div class="col-xl-6 col-md-12 col-sm-12 col-10 offset-md-2 min-vw-100 offset-sm-2 offset-xl-3 offset-1">
                                 <button type="submit" [disabled]="!userGroup.valid" class="btn btn-primary text-white">Submit</button>
                             </div>
                         </div>
