@@ -1,6 +1,6 @@
 <div class="container-fluid min-vh-100 bg-dark">
     <div class="row">
-        <div class="col-xl-8 col-md-8 col-sm-8 col-10 offset-xl-2 offset-1">
+        <div class="col-xl-8 col-md-8 col-sm-8 col-12 offset-xl-2">
             <div class="card my-5 mx-5 p-5">
                 <div class="card-title h2 text-success font-weight-bold text-center">
                     LOGIN
@@ -9,19 +9,19 @@
                 <div class="card-body">
                     <form [formGroup]="loginGroup">
                         <div class="row">
-                            <div class="col-xl-8 col-md-8 col-sm-8 col-10 offset-md-2 offset-sm-2 offset-xl-3 offset-1">
+                            <div class="col-xl-8 col-md-8 col-sm-8 col-12 offset-md-2 offset-sm-2 offset-xl-2">
                                 <label for="email">Email</label>
                                 <input type="email" formControlName="email" name="email" class="form-control" placeholder="Enter your email here" required><br>
                             </div>
-                            <div class="col-xl-8 col-md-8 col-sm-8 col-10 offset-md-2 offset-sm-2 offset-xl-3 offset-1">
+                            <div class="col-xl-8 col-md-8 col-sm-8 col-12 offset-md-2 offset-sm-2 offset-xl-2">
                                 <label for="password">Password</label>
                                 <input type="password" formControlName="password" name="password" class="form-control" placeholder="Type your password here" required><br>
                             </div>
-                            <div class="col-xl-6 col-md-12 col-sm-12 col-10 offset-md-2 min-vw-100 offset-sm-2 offset-xl-3 offset-1">
-                                <button class="btn btn-success btn-user btn-block w-25 font-weight-bold text-white" [disabled]="!loginGroup.valid" (click)="login()">Login</button>
+                            <div class="col-xl-6 col-md-12 col-sm-12 col-10 offset-md-2 offset-sm-2 offset-xl-3 offset-1">
+                                <button class="btn btn-success btn-user btn-block font-weight-bold text-white" [disabled]="!loginGroup.valid" (click)="login()">Login</button>
                             </div>
                             
-                            <div class="col-xl-6 col-md-12 col-sm-12 offset-md-2 min-vw-100 col-10 offset-sm-2 my-3 offset-xl-3 offset-1">
+                            <div class="col-xl-6 col-md-12 col-sm-12 offset-md-2 col-10 offset-sm-2 my-3 offset-xl-3 offset-1">
                                 <hr>
                                 <button class="btn btn-primary text-white font-weight-bold" (click)="navigateRegister()">Create an Account</button>
                             </div>
