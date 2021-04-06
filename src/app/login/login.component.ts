@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   login() {
     var loginData = this.loginGroup.value;
 
-    this.http.post('/login', loginData).subscribe(
+    this.http.post('/loginNd', loginData).subscribe(
         (response : any) => {
         if (response.status == "error") {
           console.log(response);

@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EventService {
 
-  private _dashboard = "/dashboard";
+  private _dashboard = "/dashboardNd";
 
   constructor(private http: HttpClient) { }
 

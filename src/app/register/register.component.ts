@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
     var jsonData = this.userGroup.value;
 
     this.http
-      .post('/register', jsonData)
+      .post('/registerNd', jsonData)
       .subscribe((response : any) => {
         if (response.status == "error") {
           console.log(response);

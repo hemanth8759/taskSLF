@@ -62,7 +62,7 @@ var verifyToken = (req, res, next) => {
 }
 
 // validating login credentials
-app.post('/login', async (req, res) => {
+app.post('/loginNd', async (req, res) => {
   var loginReq = req.body;
   var email = loginReq.email;
   var user = await UserModel.findOne({
@@ -100,7 +100,7 @@ app.post('/login', async (req, res) => {
 })
 
 // registering user data in database
-app.post('/register', async (req, res) => {
+app.post('/registerNd', async (req, res) => {
   var reqData = req.body;
   reqData.hashedPassword = bcrypt.hashSync(reqData.password, 10);
   delete reqData.password;
@@ -121,7 +121,7 @@ app.post('/register', async (req, res) => {
 })
 
 // dashboard access
-app.get('/dashboard', verifyToken, async (req,res) => {
+app.get('/dashboardNd', verifyToken, async (req,res) => {
     res.json({
         "status": "success",
         "message": "welcome to dashboard"
