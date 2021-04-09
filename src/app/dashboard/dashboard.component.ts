@@ -9,6 +9,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
+  fullName = '';
   dashboard = [];
   constructor(
     private router: Router,
@@ -23,6 +24,7 @@ export class DashboardComponent implements OnInit {
         alert(response.message);
         this.router.navigate(['']);
       } else {
+        this.fullName = response.firstName + " " + response.lastName;
         console.log(response.message);
       }
     });

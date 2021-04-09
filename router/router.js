@@ -56,6 +56,8 @@ var verifyToken = (req, res, next) => {
             })
         }
         req.email = payload.email;
+        req.firstName = payload.firstName;
+        req.lastName = payload.lastName;
         next()
     } catch (err) {
         res.json({
@@ -83,7 +85,9 @@ app.post('/loginNd', async (req, res) => {
   try {
     if (await bcrypt.compare(req.body.password, user.hashedPassword)) {
         const token = jwt.sign({
-            email: user.email
+            email: user.email,
+            firstName: user.firstName,
+            lastName: user.lastName
         } , JWT_secret_key)
       res.json({
         "status": "success",
@@ -133,6 +137,8 @@ app.post('/registerNd', async (req, res) => {
 app.get('/dashboardNd', verifyToken, async (req,res) => {
     res.json({
         "status": "success",
+        "firstName": req.firstName,
+        "lastName": req.lastName,
         "message": "welcome to dashboard"
     })
 })
